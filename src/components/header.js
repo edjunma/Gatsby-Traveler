@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import {FaBars} from "react-icons/fa"
 import { menuData } from '../data/MenuData';
+import { Button } from "./Button";
 
 const Header = () => {
   return (
@@ -17,7 +18,9 @@ const Header = () => {
         ))}
       </NavMenu>
       <NavBtn>
-        Hey
+        <Button primary="true" rounds="true" to="/trips">
+          Book a Flight
+        </Button>
       </NavBtn>
     </Nav>
   )
