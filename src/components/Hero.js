@@ -1,11 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import { Button } from "./Button";
+import Video from "../assets/videos/travel.mp4"
 
 const Hero = () => {
   return (
     <HeroContainer>
       <HeroBg>
-        <VideoBg src="" type="video/mp4" />
+        <VideoBg src={Video} type="video/mp4" autoPlay loop muted playsInline/>
       </HeroBg>
       <HeroContent>
         <HeroItems>
@@ -28,9 +30,19 @@ const HeroContainer = styled.div`
   height: 100vh;
   padding: 0 1rem;
   position: relative;
+  margin-top: -80px;
   color: #fff;
 `
-const HeroBg = styled.div``
+const HeroBg = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+`
 
 const VideoBg = styled.video``
 
