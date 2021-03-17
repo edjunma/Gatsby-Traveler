@@ -44,7 +44,11 @@ const HeroBg = styled.div`
   overflow: hidden;
 `
 
-const VideoBg = styled.video``
+const VideoBg = styled.video`
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+`
 
 const HeroContent = styled.div``
 
