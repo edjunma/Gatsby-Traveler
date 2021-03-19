@@ -1,7 +1,32 @@
 import React from "react";
 import styled from "styled-components";
+import { useStaticQuery, graphql } from 'gatsby';
 
 const Trips = () => {
+  const data = useStaticQuery(graphql`
+    allTripsJson {
+      edges {
+        node {
+          alt 
+          button
+          name
+          img {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  function getTrips(data) {
+    const tripsArray = []
+    data.allTripsJson.edges.forEach((edge) )
+  }
+
   return (
     <ProductsContainer>
       <ProductsHeading>Heading</ProductsHeading>
