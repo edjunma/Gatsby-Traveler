@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import { Button } from "./Button";
+import { ImLocation } from "react-icons/im";
 
 const Trips = () => {
   const data = useStaticQuery(graphql`
@@ -66,4 +68,26 @@ const ProductsHeading = styled.div`
 `
 
 const ProductWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  justify-items: center;
+  padding: 0 2rem;
+
+  @media screen and (max-width: 1200px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width: 868px) {
+    grid-template-columns: 1fr;
+  }
+`
+
+const ProductCard = styled.div`
+  line-height: 2;
+  width: 100%;
+  height: 500px;
+  position: relative;
+  border-radius: 10px;
+  transition: 0.2s ease;
 `
