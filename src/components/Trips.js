@@ -30,7 +30,7 @@ const Trips = () => {
     data.allTripsJson.edges.forEach((item, index) => {
       tripsArray.push(
         <ProductCard key={index}>
-          <Img src={item.node.img.childImageSharp.fluid.src} alt={item.node.alt} fluid={item.node.img.childImageSharp.fluid} />
+          <ProductImg src={item.node.img.childImageSharp.fluid.src} alt={item.node.alt} fluid={item.node.img.childImageSharp.fluid} />
           <ProductInfo>
             <TextWrap>
               <ImLocation />
@@ -90,4 +90,21 @@ const ProductCard = styled.div`
   position: relative;
   border-radius: 10px;
   transition: 0.2s ease;
+`
+
+const ProductImg = styled(Img)`
+  height: 100%;
+  max-width: 100%;
+  position: relative;
+  border-radius: 10px;
+  filter: brightness(70%);
+  transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  
+  &:hover {
+    filter: brightness(100%);
+  }
+`
+
+const ProductInfo = styled.div`
+  display: flex;
 `
