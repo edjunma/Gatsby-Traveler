@@ -7,6 +7,7 @@ import { ImLocation } from "react-icons/im";
 
 const Trips = ({ heading }) => {
   const data = useStaticQuery(graphql`
+    query TripsQuery {
     allTripsJson {
       edges {
         node {
@@ -23,6 +24,7 @@ const Trips = ({ heading }) => {
         }
       }
     }
+  }
   `)
 
   function getTrips(data) {
