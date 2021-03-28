@@ -36,4 +36,16 @@ const Testimonials = () => {
 
 export default Testimonials
 
-const TestimonialsContainer = styled.div``
+const TestimonialsContainer = styled.div`
+  color: #077bf1;
+  font-size: 1rem;
+  padding-left: 2rem;
+  margin-bottom: 0.75rem;
+`
+
+const TopLine = styled.div`
+  color: #077bf1;
+  font-size: 1rem;
+  padding-left: 2rem;
+  margin-bottom: 0.75rem;
+`
