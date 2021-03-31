@@ -58,3 +58,30 @@ const Description = styled.p`
   font-size: clamp(1.5rem, 5vw, 2rem);
   font-weight: bold;
 `
+
+const ContentWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 2rem;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+`
+const ColumnOne = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+`
+
+const Testimonial = styled.div`
+  padding-top: 1rem;
+  padding-right: 2rem;
+
+  h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-size: italic;
+  }
+`
+
+const ColumnTwo = styled.div``
