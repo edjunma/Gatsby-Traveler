@@ -82,6 +82,23 @@ const Testimonial = styled.div`
     font-size: 1.5rem;
     font-size: italic;
   }
+
+  p {
+    color: #3b3b3b;
+  }
 `
 
-const ColumnTwo = styled.div``
+const ColumnTwo = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 2rem;
+  grid-gap: 10px;
+
+  @media screen and (max-width: 500px) {
+    grid-template-columns: 1fr;
+  }
+`
+
+const Images = styled(Img)`
+  border-radius: 3px;
+`
