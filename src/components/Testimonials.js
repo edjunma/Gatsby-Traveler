@@ -37,10 +37,11 @@ const Testimonials = () => {
 export default Testimonials
 
 const TestimonialsContainer = styled.div`
-  color: #077bf1;
-  font-size: 1rem;
-  padding-left: 2rem;
-  margin-bottom: 0.75rem;
+  width: 100%;
+  background: #fcfcfc;
+  color: #000;
+  padding: 5rem calc((100vw - 1300px) / 2);
+  height: 100%;
 `
 
 const TopLine = styled.div`
@@ -48,4 +49,12 @@ const TopLine = styled.div`
   font-size: 1rem;
   padding-left: 2rem;
   margin-bottom: 0.75rem;
+`
+
+const Description = styled.p`
+  text-align: start;
+  padding-left: 2rem;
+  margin-bottom: 4rem;
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  font-weight: bold;
 `
