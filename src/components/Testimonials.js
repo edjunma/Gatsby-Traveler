@@ -14,7 +14,7 @@ const Testimonials = () => {
           node {
             childImageSharp {
               fluid {
-                src
+                ...GatsbyImageSharpFluid
               }
             }
           }
@@ -34,19 +34,19 @@ const Testimonials = () => {
       <ContentWrapper>
         <ColumnOne>
           <Testimonial>
-            <IoMdCheckmarkCircleOutline />
+            <IoMdCheckmarkCircleOutline css={`color: #3fffa8; font-size: 2rem; margin-bottom: 1rem;`} />
             <h3>Sean Michaels</h3>
             <p> "The greatest experience of my life! It was so much fun exploring the mountains and they made it super easy to book my trip and accommodation."</p>
           </Testimonial>
           <Testimonial>
-            <FaRegLightbulb />
+            <FaRegLightbulb css={`color: #f9b19b; font-size: 2rem; margin-bottom: 1rem;`} />
             <h3>Sarah Kin</h3>
             <p> "It was so easy to set up my trip! They answered all my questions right away and gave me the best price out of all the companies I researched."</p>
           </Testimonial>
         </ColumnOne>
         <ColumnTwo>
           {data.allFile.edges.map((image, key) => {
-            ;<Images key={key} fluid={image.node.childImageSharp.fluid} />
+            <Images key={key} fluid={image.node.childImageSharp.fluid} />
           })}
         </ColumnTwo>
       </ContentWrapper>
@@ -90,7 +90,7 @@ const ContentWrapper = styled.div`
 `
 const ColumnOne = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 `
 
 const Testimonial = styled.div`
