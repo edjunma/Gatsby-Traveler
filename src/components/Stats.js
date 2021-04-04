@@ -1,5 +1,16 @@
 import React from 'react'
 import styled from "styled-components"
+import {GiEarthAmerica} from "react-icons/gi"
+import {MdAirplanemodeActive, MdTimer} from "react-icons/md"
+import {FaMoneyCheck} from "react-icons/fa"
+
+const StatsData = [
+  {
+    icon: (<GiEarthAmerica />),
+    title: "Over 100 Destinations",
+    desc: "Travel to over 100 unique places"
+  }
+]
 
 const Stats = () => {
   return (
@@ -33,6 +44,10 @@ const Wrapper = styled.div`
   grid-gap: 10px;
 
   @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media screen and (max-width: 500px) {
     grid-template-columns: 1fr;
   }
 `
