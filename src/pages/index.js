@@ -11,6 +11,7 @@ const IndexPage = () => (
     <Hero />
     <Trips heading="Our Favorite Destinations" />
     <Testimonials />
+    <Stats />
   </Layout>
 )
 

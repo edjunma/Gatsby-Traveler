@@ -21,5 +21,18 @@ const StatsContainer = styled.div`
   justify-content: center;
   padding: 4rem calc((100vw - 1300px) / 2);
 `
-const Heading = styled.h1``
-const Wrapper = styled.div``
+const Heading = styled.h1`
+  text-align: start;
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  margin-bottom: 3rem;
+  padding: 0 2rem;
+`
+const Wrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+`
