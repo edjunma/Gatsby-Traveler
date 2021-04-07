@@ -9,14 +9,38 @@ const StatsData = [
     icon: (<GiEarthAmerica />),
     title: "Over 100 Destinations",
     desc: "Travel to over 100 unique places"
-  }
+  },
+  {
+    icon: (<MdAirplanemodeActive />),
+    title: "1 Million Trips Made",
+    desc: "Over 1 million trips completed last year"
+  },
+  {
+    icon: (<MdTimer />),
+    title: "Fastest Support",
+    desc: "Access our support team 24/7"
+  },
+  {
+    icon: (<FaMoneyCheck />),
+    title: "Best Deals",
+    desc: "We offer the best prices"
+  },
 ]
 
 const Stats = () => {
   return (
     <StatsContainer>
       <Heading>Why Choose Us?</Heading>
-      <Wrapper></Wrapper>
+      <Wrapper>
+        {StatsData.map((item, index) => {
+          return (
+            <StatsBox key={index}>
+              <Icon></Icon>
+              <Title></Title>
+              <Description></Description>
+            </StatsBox>)
+        })}
+      </Wrapper>
     </StatsContainer>
   )
 }
