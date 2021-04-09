@@ -6,12 +6,12 @@ import {FaMoneyCheck} from "react-icons/fa"
 
 const StatsData = [
   {
-    icon: (<GiEarthAmerica />),
+    icon: (<GiEarthAmerica css={`color: #047bf1;`} />),
     title: "Over 100 Destinations",
     desc: "Travel to over 100 unique places"
   },
   {
-    icon: (<MdAirplanemodeActive />),
+    icon: (<MdAirplanemodeActive css={`color: #f3a82e;`} />),
     title: "1 Million Trips Made",
     desc: "Over 1 million trips completed last year"
   },
@@ -75,3 +75,21 @@ const Wrapper = styled.div`
     grid-template-columns: 1fr;
   }
 `
+
+const StatsBox = styled.div`
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+`
+
+const Icon = styled.div`
+  font-size: 3rem;
+  margin-bottom: 1rem;
+`
+
+const Title = styled.div`
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  margin-bottom: 0.5rem;
+`
+
+const Description = styled.div``
