@@ -36,5 +36,30 @@ const EmailContainer = styled.div`
   align-items: center;
 `
 
-const EmailContent = styled.div``
-const FormWrap = styled.div``
+const EmailContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: clamp(1rem, 5vw, 3rem);
+    padding: 0 1rem;
+  }
+
+  p {
+    text-align: center;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+  }
+
+  form {
+    z-index: 10;
+  }
+`
+
+const FormWrap = styled.div`
+  input {}
+`
