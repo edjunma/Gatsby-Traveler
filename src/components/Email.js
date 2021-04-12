@@ -13,7 +13,25 @@ const Email = () => {
             <label htmlFor="email">
               <input type="email" placeholder="Enter your email" id="email" />
             </label>
-            <Button>Sign Up</Button>
+            <Button 
+              as="button"
+              type="submit"
+              primary="true"
+              round="true"
+              css={`
+                height: 48px;
+
+                @media screen and (max-width: 768px) {
+                  width: 100%;
+                  min-width: 350px;
+                }
+
+                @media screen and (max-width: 400px) {
+                  width: 100%;
+                  min-width: 250px;
+                }
+              `}  
+            >Sign Up</Button>
           </FormWrap>
         </form>
       </EmailContent>
@@ -61,5 +79,25 @@ const EmailContent = styled.div`
 `
 
 const FormWrap = styled.div`
-  input {}
+  input {
+    padding: 1rem 1.5rem;
+    outline: none;
+    width: 350px;
+    height: 48px;
+    border-radius: 50px;
+    border: none;
+    margin-right: 1rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+
+    input {
+      margin-bottom: 1rem;
+      width: 100%;
+      margin-right: 0;
+    }
+  }
 `
