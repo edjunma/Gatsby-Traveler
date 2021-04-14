@@ -70,4 +70,18 @@ const FooterLinksWrapper = styled.div`
   }
 `
 
-const FooterLinkItems = styled.div``
+const FooterLinkItems = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem 2rem;
+
+  @media screen and (max-width: 400px) {
+    padding: 1rem;
+  }
+`
+
+const FooterLinkTitle = styled.div`
+  font-size: 14px;
+  margin-bottom: 16px;
+`
