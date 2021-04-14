@@ -50,4 +50,24 @@ const FooterContainer = styled.div`
 
 const FooterDesc = styled.div`
   padding: 0 2rem;
+
+  h1 {
+    margin-bottom: 3rem;
+    color: #f26a2e;
+  }
+
+  @media screen and (max-width: 400px) {
+    padding: 1rem;
+  }
 `
+
+const FooterLinksWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media screen and (max-width: 820px) {
+    grid-template-columns: 1fr;
+  }
+`
+
+const FooterLinkItems = styled.div``
